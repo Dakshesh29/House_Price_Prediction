@@ -2,7 +2,7 @@
 
 An end-to-end Machine Learning project that predicts house prices based on various property features. This project covers the complete ML workflow, from data analysis and model training to deploying a Flask web application.
 
----
+Url - https://house-price-prediction-dakshesh-h9hfg3bjabgzhkdb.centralindia-01.azurewebsites.net/
 
 ## 📌 Project Overview
 
