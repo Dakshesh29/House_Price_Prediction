@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import pickle
+import os
 
 app = Flask(__name__)
 
-# Load the trained model
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open('D:\\End to end ML projects\\House_Price_Prediction\\artifacts\\best_model_lr.pkl', 'rb') as f:
+model_path = os.path.join(BASE_DIR, "artifacts", "best_model_lr.pkl")
+preprocessor_path = os.path.join(BASE_DIR, "artifacts", "preprocessor.pkl")
+
+with open(model_path, "rb") as f:
     model = pickle.load(f)
 
-with open("D:\\End to end ML projects\\House_Price_Prediction\\artifacts\\preprocessor.pkl", "rb") as f:
+with open(preprocessor_path, "rb") as f:
     preprocessor = pickle.load(f)
 
 @app.route('/')
